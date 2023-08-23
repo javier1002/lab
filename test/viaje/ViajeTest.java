@@ -20,99 +20,89 @@ public class ViajeTest {
     @Test
     public void testDescripcion() {
         System.out.println("descripcion");
-        Viaje instance = new ViajeImpl();
-        String expResult = "";
+        Viaje instance = new ViajeIndividual("Origen", "Destino", 100, new Date(), new Date());
+        String expResult = "Disfruta tu viaje individual"; 
         String result = instance.descripcion();
-        assertEquals(expResult, result,0);
-        fail();
+        assertEquals(expResult, result);
     }
 
     @Test
     public void testCualquierMetodo() {
         System.out.println("cualquierMetodo");
         Viaje instance = new ViajeImpl();
-        String expResult = "";
+        String expResult = "Cualquier metodo implementado en la clase base";
         String result = instance.cualquierMetodo();
         assertEquals(expResult, result);
-        fail("The test case is a prototype.");
     }
 
     @Test
     public void testCualquierMetodo2() {
         System.out.println("cualquierMetodo2");
         Viaje instance = new ViajeImpl();
-        String expResult = "";
+        String expResult = "Cualquier metodo2 implementado en la clase base";;
         String result = instance.cualquierMetodo2();
         assertEquals(expResult, result);
-        fail("The test case is a prototype.");
     }
 
     @Test
     public void testGetOrigen() {
         System.out.println("getOrigen");
-        Viaje instance = new ViajeImpl();
-        String expResult = "";
+        Viaje instance = new ViajeIndividual("Origen", "Destino", 100, new Date(), new Date());
+        String expResult = "Origen";
         String result = instance.getOrigen();
         assertEquals(expResult, result);
-        fail("The test case is a prototype.");
     }
 
     @Test
     public void testGetDestino() {
         System.out.println("getDestino");
-        Viaje instance = new ViajeImpl();
-        String expResult = "";
+        Viaje instance = new ViajeIndividual("Origen", "Destino", 100, new Date(), new Date());
+        String expResult = "Destino";
         String result = instance.getDestino();
         assertEquals(expResult, result);
-        fail("The test case is a prototype.");
     }
 
     @Test
     public void testGetCosto() {
         System.out.println("getCosto");
-        Viaje instance = new ViajeImpl();
-        int expResult = 0;
+        Viaje instance = new ViajeIndividual("Origen", "Destino", 100, new Date(), new Date());
+        int expResult = 100;
         int result = instance.getCosto();
-        assertEquals(expResult, result,0);
-        fail("The test case is a prototype.");
+        assertEquals(expResult, result);
     }
 
     @Test
     public void testGetFechaSalida() {
         System.out.println("getFechaSalida");
-        Viaje instance = new ViajeImpl();
+        Viaje instance =  new ViajeIndividual("Origen", "Destino", 100, null, new Date());
         Date expResult = null;
         Date result = instance.getFechaSalida();
         assertEquals(expResult, result);
-        fail("The test case is a prototype.");
     }
 
     @Test
     public void testGetFechallegada() {
         System.out.println("getFechallegada");
-        Viaje instance = new ViajeImpl();
+        Viaje instance = new ViajeIndividual("Origen", "Destino", 100, new Date(), null);
         Date expResult = null;
         Date result = instance.getFechallegada();
         assertEquals(expResult, result);
-        fail("The test case is a prototype.");
     }
 
     @Test
     public void testSetOrigen() {
         System.out.println("setOrigen");
-        String origen = "";
-        Viaje instance = new ViajeImpl();
+        String origen = "dsd";
+        Viaje instance = new ViajeIndividual("Origen", "Destino", 100, new Date(), new Date());
         instance.setOrigen(origen);
-        fail("The test case is a prototype.");
     }
 
     @Test
     public void testSetDestino() {
         System.out.println("setDestino");
         String destino = "";
-        Viaje instance = new ViajeImpl();
+        Viaje instance = new ViajeIndividual("Origen", "Destino", 100, new Date(), new Date());
         instance.setDestino(destino);
-        fail("The test case is a prototype.");
     }
 
     @Test
@@ -121,7 +111,6 @@ public class ViajeTest {
         int costo = 0;
         Viaje instance = new ViajeImpl();
         instance.setCosto(costo);
-        fail("The test case is a prototype.");
     }
 
     @Test
@@ -130,7 +119,6 @@ public class ViajeTest {
         Date fechaSalida = null;
         Viaje instance = new ViajeImpl();
         instance.setFechaSalida(fechaSalida);
-        fail("The test case is a prototype.");
     }
 
     @Test
@@ -139,7 +127,6 @@ public class ViajeTest {
         Date fechallegada = null;
         Viaje instance = new ViajeImpl();
         instance.setFechallegada(fechallegada);
-        fail("The test case is a prototype.");
     }
 
     public class ViajeImpl extends Viaje {

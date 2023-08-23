@@ -12,13 +12,12 @@ import java.util.Date;
  */
 public class ViajeFamiliar extends Viaje {
 
-    public ViajeFamiliar(String origen, String destino, int costo, Date fechaSalida, Date fechallegada, int familia) {
+    public ViajeFamiliar(String origen, String destino, int costo, Date fechaSalida, Date fechallegada, int par1) {
         this.origen = origen;
         this.destino = destino;
         this.costo = costo;
         this.fechaSalida = fechaSalida;
         this.fechallegada = fechallegada;
-        this.familia=familia;
 
     }
     private int familia;

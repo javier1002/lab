@@ -12,13 +12,12 @@ import java.util.Date;
  */
 public class ViajeIncentivo extends Viaje {
 
-    public ViajeIncentivo(String origen, String destino, int costo, Date fechaSalida, Date fechallegada,String empresa) {
+    public ViajeIncentivo(String origen, String destino, int costo, Date fechaSalida, Date fechallegada) {
        this.origen = origen;
         this.destino = destino;
         this.costo = costo;
         this.fechaSalida = fechaSalida;
         this.fechallegada = fechallegada;
-         this.empresa=empresa;
     }
 
     private String empresa;
@@ -35,6 +34,7 @@ public class ViajeIncentivo extends Viaje {
         return "Viaje incentivo que te envia la empresa " + empresa;
     }
 
+    @Override
     public String cualquierMetodo2() {
         return "Metodo implementado en la clase hija viaje de incentivo";
     }
